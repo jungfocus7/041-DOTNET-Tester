@@ -36,6 +36,7 @@ namespace HPO402.WpfRoot
         {
             Loaded -= prLoaded;
 
+
             MainHelper.InitOnce(this);
 
             DefaultProvider.LoadData();
@@ -64,9 +65,122 @@ namespace HPO402.WpfRoot
                 {
                     Debug.WriteLine($"~~~~~~~~~~{rc}");
                 });
+
+
+            AllowDrop = true;
+            //DragEnter += prDragEnter;
+            //DragOver += prDragOver;
+
         }
 
         private ContextMenuEx91 m_cme91;
         private ContextMenuEx31 m_cme31;
+
+
+
+        //private void prDragEnter(object sd, DragEventArgs ea)
+        //{
+        //    ea.Handled = true;
+        //}
+
+        //private void prDragOver(object sd, DragEventArgs ea)
+        //{
+        //    ea.Handled = true;
+        //}
+
+        //protected override void OnDragEnter(DragEventArgs e)
+        //{
+        //    base.OnDragEnter(e);
+        //}
+
+        //protected override void OnDragLeave(DragEventArgs e)
+        //{
+        //    base.OnDragLeave(e);
+        //}
+
+        //protected override void OnDragOver(DragEventArgs e)
+        //{
+        //    base.OnDragOver(e);
+        //}
+
+
+
+
+        //protected override void OnPreviewDragEnter(DragEventArgs ea)
+        //{
+        //    base.OnPreviewDragEnter(ea);
+
+        //    //Debug.WriteLine("PreviewDragEnter");
+        //}
+
+        //protected override void OnPreviewDragLeave(DragEventArgs ea)
+        //{
+        //    base.OnPreviewDragLeave(ea);
+
+        //    //Debug.WriteLine("PreviewDragLeave");
+        //}
+
+        //protected override void OnPreviewDragOver(DragEventArgs ea)
+        //{
+        //    base.OnPreviewDragOver(ea);
+
+        //    //Debug.WriteLine("PreviewDragOver");
+        //}
+
+        //protected override void OnPreviewDrop(DragEventArgs ea)
+        //{
+        //    base.OnPreviewDrop(ea);
+
+        //    Debug.WriteLine("PreviewDrop");
+        //}
+
+
+
+        protected override void OnDragEnter(DragEventArgs ea)
+        {
+            base.OnDragEnter(ea);
+
+            Debug.WriteLine("DragEnter");
+
+            ea.Effects = DragDropEffects.Scroll;
+        }
+
+        protected override void OnDragOver(DragEventArgs ea)
+        {
+            base.OnDragOver(ea);
+
+            Debug.WriteLine("DragOver");
+
+            ea.Effects = DragDropEffects.Scroll;
+        }
+
+        protected override void OnDrop(DragEventArgs ea)
+        {
+            base.OnDrop(ea);
+
+            Debug.WriteLine("Drop");
+
+            ea.Effects = DragDropEffects.None;
+
+            if (ea.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                string[] fpa = (string[])ea.Data.GetData(DataFormats.FileDrop);
+                if ((fpa != null) && (fpa.Length == 1))
+                {
+                    m_txb71.Text = fpa[0];
+                }
+
+                //// If the string can be converted into a Brush, allow copying.
+                //BrushConverter converter = new BrushConverter();
+                //if (converter.IsValid(dataString))
+                //{
+                //    ea.Effects = DragDropEffects.Copy | DragDropEffects.Move;
+                //}
+            }
+            //if (ea.Data.GetData(DataFormats.FileDrop) is string fp)
+            //{
+
+            //}
+        }
     }
 }
