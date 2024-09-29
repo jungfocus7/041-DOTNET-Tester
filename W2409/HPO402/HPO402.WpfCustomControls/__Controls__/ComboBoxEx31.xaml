@@ -1,0 +1,45 @@
+﻿<ComboBox
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="HPO402.WpfCustomControls.ComboBoxEx31">
+    <ComboBox.Resources>
+        <!--<ContextMenu x:Key="key_ContextMenu">
+            <MenuItem Header="Menu item 1"/>
+            <MenuItem Header="Menu item 2"/>
+            <Separator />
+            <MenuItem Header="Menu item 3"/>
+        </ContextMenu>-->
+        <ContextMenu x:Key="key_ContextMenu">
+            <MenuItem Command="ApplicationCommands.Cut"/>
+            <MenuItem Command="ApplicationCommands.Copy"/>
+            <MenuItem Command="ApplicationCommands.Paste"/>
+            <MenuItem Command="ApplicationCommands.SelectAll"/>
+            <Separator/>
+            <MenuItem Header="URL 복사" Tag="M01" Click="prMenuItem_Click"/>
+            <MenuItem Header="URL 열기" Tag="M02" Click="prMenuItem_Click"/>
+        </ContextMenu>
+    </ComboBox.Resources>
+    <ComboBox.ItemsPanel>
+        <ItemsPanelTemplate>
+            <VirtualizingStackPanel/>
+        </ItemsPanelTemplate>
+    </ComboBox.ItemsPanel>
+    <!--<ComboBox.ContextMenu>
+        <ContextMenu>
+            <MenuItem Command="ApplicationCommands.Cut" />
+            <MenuItem Command="ApplicationCommands.Copy" />
+            <MenuItem Command="ApplicationCommands.Paste" />
+            <MenuItem Command="ApplicationCommands.SelectAll" />
+            <Separator/>
+            <MenuItem Header="URL 복사"/>
+            <MenuItem Header="URL 열기"/>
+        </ContextMenu>
+    </ComboBox.ContextMenu>-->
+    <!--<Grid>
+        <Popup>
+            <StackPanel Orientation="Vertical">
+                <Rectangle Fill="Red" Width="100" Height="100"/>
+            </StackPanel>
+        </Popup>
+    </Grid>-->
+</ComboBox>
