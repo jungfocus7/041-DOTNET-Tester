@@ -30,7 +30,7 @@ namespace TesterDXApplication71
             //elem.Color.FontBold = false;
             //elem.Color.FontSize = 50;
 
-            Application.Run(new m_frmMain());
+            Application.Run(new TesterForm());
         }
     }
 }
