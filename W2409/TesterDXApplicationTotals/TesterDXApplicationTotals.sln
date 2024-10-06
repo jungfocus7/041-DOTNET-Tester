@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.35213.121
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35229.62
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesterDXApplication71", "TesterDXApplication71\TesterDXApplication71.csproj", "{EC3076B5-B8EB-4E2F-979E-A6E12AEC5B53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{5503F25E-2BB0-4565-9022-B7FB869EE7CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "__DxTTs__", "__DxTTs__", "{22811570-B935-4463-9897-E7AEE8604BAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp2", "WindowsFormsApp2\WindowsFormsApp2.csproj", "{6248144F-7EFF-4819-8384-91D435F8E40B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,21 @@ Global
 		{EC3076B5-B8EB-4E2F-979E-A6E12AEC5B53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC3076B5-B8EB-4E2F-979E-A6E12AEC5B53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC3076B5-B8EB-4E2F-979E-A6E12AEC5B53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5503F25E-2BB0-4565-9022-B7FB869EE7CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5503F25E-2BB0-4565-9022-B7FB869EE7CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5503F25E-2BB0-4565-9022-B7FB869EE7CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5503F25E-2BB0-4565-9022-B7FB869EE7CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6248144F-7EFF-4819-8384-91D435F8E40B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6248144F-7EFF-4819-8384-91D435F8E40B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6248144F-7EFF-4819-8384-91D435F8E40B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6248144F-7EFF-4819-8384-91D435F8E40B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5503F25E-2BB0-4565-9022-B7FB869EE7CA} = {22811570-B935-4463-9897-E7AEE8604BAF}
+		{6248144F-7EFF-4819-8384-91D435F8E40B} = {22811570-B935-4463-9897-E7AEE8604BAF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E8E00134-033C-4949-A52D-EBD966BEB17B}

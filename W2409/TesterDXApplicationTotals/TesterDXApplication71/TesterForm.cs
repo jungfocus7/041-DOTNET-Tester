@@ -66,18 +66,18 @@ namespace TesterDXApplication71
 
         private void prLayoutControlInit()
         {
-            m_layoutControlItem1.MaxSize = new Size(500, 1);
-            m_layoutControlItem1.MinSize = new Size(200, 1);
-            //m_layoutControlItem1.Size = new Size(300, 1);
+            m_layoutControlItem1.MaxSize = new Size(500, 0);
+            m_layoutControlItem1.MinSize = new Size(200, 0);
+            //m_layoutControlItem1.Size = new Size(300, 0);
 
             m_layoutControlItem2.ContentHorzAlignment = DevExpress.Utils.HorzAlignment.Center;
             m_layoutControlItem2.MaxSize = Size.Empty;
             m_layoutControlItem2.MinSize = Size.Empty;
             m_layoutControlItem2.Size = Size.Empty;
 
-            m_layoutControlItem3.MaxSize = new Size(500, 1);
-            m_layoutControlItem3.MinSize = new Size(200, 1);
-            //m_layoutControlItem3.Size = new Size(300, 1);
+            m_layoutControlItem3.MaxSize = new Size(500, 0);
+            m_layoutControlItem3.MinSize = new Size(200, 0);
+            //m_layoutControlItem3.Size = new Size(300, 0);
 
 
             Rectangle rct = m_layoutControlGroup1.Bounds;
