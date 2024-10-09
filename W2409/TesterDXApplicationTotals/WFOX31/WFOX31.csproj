@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6248144F-7EFF-4819-8384-91D435F8E40B}</ProjectGuid>
+    <ProjectGuid>{1E6697C9-5284-4F52-8130-EFCE0B90A3B6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsApp2</RootNamespace>
-    <AssemblyName>WindowsFormsApp2</AssemblyName>
+    <RootNamespace>WFOX31</RootNamespace>
+    <AssemblyName>WFOX31</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -56,20 +56,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TreeListEx51.cs">
+    <Compile Include="DataProviders\DefaultProvider.cs" />
+    <Compile Include="ExtendedControls\__Ext51_\TreeListEx51.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TPForm1.cs">
+    <Compile Include="ExtendedControls\__Ext51_\XtraTabControlEx51.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Models\RecordInfo.cs" />
+    <Compile Include="TesterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TPForm1.Designer.cs">
-      <DependentUpon>TPForm1.cs</DependentUpon>
+    <Compile Include="TesterForm.Designer.cs">
+      <DependentUpon>TesterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TPProgram.cs" />
+    <Compile Include="TesterProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="TPForm1.resx">
-      <DependentUpon>TPForm1.cs</DependentUpon>
+    <EmbeddedResource Include="TesterForm.resx">
+      <DependentUpon>TesterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,6 +84,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -92,6 +98,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ControlExtentions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

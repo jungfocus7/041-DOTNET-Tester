@@ -1,7 +1,7 @@
 ﻿
 namespace WFOX31
 {
-    partial class TPForm1
+    partial class TesterForm
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,14 +29,11 @@ namespace WFOX31
         /// </summary>
         private void InitializeComponent()
         {
-            this.m_xtc30 = new DevExpress.XtraTab.XtraTabControl();
-            this.m_xtp31 = new DevExpress.XtraTab.XtraTabPage();
-            this.m_trl31 = new TreeListEx51();
-            this.m_tlc1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.m_tlc2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.m_tlc3 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.m_xtp32 = new DevExpress.XtraTab.XtraTabPage();
-            this.m_trl32 = new DevExpress.XtraTreeList.TreeList();
+            this.m_xtc30 = new ExtendedControls.XtraTabControlEx51();
+            this.m_xtp31 = new ExtendedControls.XtraTabPageEx51();
+            this.m_trl31 = new ExtendedControls.TreeListEx51();
+            this.m_xtp32 = new ExtendedControls.XtraTabPageEx51();
+            this.m_trl32 = new ExtendedControls.TreeListEx51();
             this.m_sbt31 = new DevExpress.XtraEditors.SimpleButton();
             this.m_sbt32 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.m_xtc30)).BeginInit();
@@ -77,54 +74,17 @@ namespace WFOX31
             // 
             // m_trl31
             // 
-            this.m_trl31.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
-            this.m_tlc1,
-            this.m_tlc2,
-            this.m_tlc3});
             this.m_trl31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_trl31.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_trl31.Location = new System.Drawing.Point(0, 0);
             this.m_trl31.Name = "m_trl31";
             this.m_trl31.BeginUnboundLoad();
-            this.m_trl31.AppendNode(new object[] {
-            "크레용",
-            "피의자자백서",
-            "의견"}, -1);
-            this.m_trl31.AppendNode(new object[] {
-            "크레용",
-            "피의자자백서",
-            "의견"}, -1);
-            this.m_trl31.AppendNode(new object[] {
-            "크레용",
-            null,
-            null}, 1);
+            this.m_trl31.AppendNode(new object[0], -1);
+            this.m_trl31.AppendNode(new object[0], -1);
+            this.m_trl31.AppendNode(new object[0], 1);
             this.m_trl31.EndUnboundLoad();
             this.m_trl31.Size = new System.Drawing.Size(780, 511);
             this.m_trl31.TabIndex = 0;
-            // 
-            // m_tlc1
-            // 
-            this.m_tlc1.Caption = "문건종류";
-            this.m_tlc1.FieldName = "Type";
-            this.m_tlc1.Name = "m_tlc1";
-            this.m_tlc1.Visible = true;
-            this.m_tlc1.VisibleIndex = 0;
-            // 
-            // m_tlc2
-            // 
-            this.m_tlc2.Caption = "문건명";
-            this.m_tlc2.FieldName = "Name";
-            this.m_tlc2.Name = "m_tlc2";
-            this.m_tlc2.Visible = true;
-            this.m_tlc2.VisibleIndex = 1;
-            // 
-            // m_tlc3
-            // 
-            this.m_tlc3.Caption = "첨부";
-            this.m_tlc3.FieldName = "Attach";
-            this.m_tlc3.Name = "m_tlc3";
-            this.m_tlc3.Visible = true;
-            this.m_tlc3.VisibleIndex = 2;
             // 
             // m_xtp32
             // 
@@ -166,7 +126,7 @@ namespace WFOX31
             this.m_sbt32.TabIndex = 2;
             this.m_sbt32.Text = "TPK32";
             // 
-            // TPForm1
+            // TesterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -176,7 +136,7 @@ namespace WFOX31
             this.Controls.Add(this.m_xtc30);
             this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "TPForm1";
+            this.Name = "TesterForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -192,15 +152,12 @@ namespace WFOX31
 
         #endregion
 
-        private DevExpress.XtraTab.XtraTabControl m_xtc30;
-        private DevExpress.XtraTab.XtraTabPage m_xtp31;
-        private DevExpress.XtraTab.XtraTabPage m_xtp32;
-        private TreeListEx51 m_trl31;
-        private DevExpress.XtraTreeList.TreeList m_trl32;
+        private ExtendedControls.XtraTabControlEx51 m_xtc30;
+        private ExtendedControls.XtraTabPageEx51 m_xtp31;
+        private ExtendedControls.XtraTabPageEx51 m_xtp32;
+        private ExtendedControls.TreeListEx51 m_trl31;
+        private ExtendedControls.TreeListEx51 m_trl32;
         private DevExpress.XtraEditors.SimpleButton m_sbt31;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn m_tlc1;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn m_tlc2;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn m_tlc3;
         private DevExpress.XtraEditors.SimpleButton m_sbt32;
     }
 }

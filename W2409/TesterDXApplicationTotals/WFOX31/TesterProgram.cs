@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace WFOX31
 {
-    public static class TPProgram
+    public static class TesterProgram
     {
         /// <summary>
         /// 해당 애플리케이션의 주 진입점입니다.
@@ -14,7 +14,7 @@ namespace WFOX31
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TPForm1());
+            Application.Run(new TesterForm());
         }
     }
 }
