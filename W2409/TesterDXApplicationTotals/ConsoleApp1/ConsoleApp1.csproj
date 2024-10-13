@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\TypeExtension.cs" />
+    <Compile Include="Helpers\ModelHelper.cs" />
+    <Compile Include="Models\UserInfo.cs" />
     <Compile Include="TyxProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
