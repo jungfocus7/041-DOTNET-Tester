@@ -1,0 +1,7 @@
+D:\041) DOTNET#Tester\W2409\TesterDXApplicationTotals\##Debug\ConsoleApp1.exe.config
+D:\041) DOTNET#Tester\W2409\TesterDXApplicationTotals\##Debug\ConsoleApp1.exe
+D:\041) DOTNET#Tester\W2409\TesterDXApplicationTotals\##Debug\ConsoleApp1.pdb
+D:\041) DOTNET#Tester\W2409\TesterDXApplicationTotals\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+D:\041) DOTNET#Tester\W2409\TesterDXApplicationTotals\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\041) DOTNET#Tester\W2409\TesterDXApplicationTotals\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\041) DOTNET#Tester\W2409\TesterDXApplicationTotals\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
