@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.LookAndFeel;
+using DevExpress.XtraEditors;
 using DevExpress.XtraTreeList;
 using DevExpress.XtraTreeList.Columns;
 using System;
@@ -7,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -108,15 +110,18 @@ namespace WFOX31
 
         private void prPage2Settings()
         {
+            prTreeListSetStyle();
+
+
             m_trl32.OptionsView.AutoWidth = false;
             //m_trl32.OptionsView.ShowButtons = false;
             //m_trl32.OptionsView.ShowIndicator = false;
             m_trl32.OptionsBehavior.Editable = false;
+            m_trl32.OptionsSelection.EnableAppearanceFocusedRow = true;
+            m_trl32.OptionsSelection.EnableAppearanceFocusedCell = false;
 
-            //m_trl32.LookAndFeel.UseDefaultLookAndFeel = false;
-            m_trl32.OptionsView.EnableAppearanceEvenRow = false;
-            m_trl32.OptionsView.EnableAppearanceOddRow = true;
-
+            //m_trl32.OptionsView.EnableAppearanceEvenRow = false;
+            //m_trl32.OptionsView.EnableAppearanceOddRow = true;
             //m_trl32.ViewStyle = TreeListViewStyle.TreeList;
 
 
@@ -131,6 +136,46 @@ namespace WFOX31
             m_trl32.ExpandAll();
             m_trl32.ForceInitialize();
             m_trl32.BestFitColumns();
+        }
+
+
+        private void prTreeListSetStyle()
+        {
+            #region 삽질한거
+            //m_trl32.LookAndFeel.UseDefaultLookAndFeel = false;
+            //m_trl32.LookAndFeel.SetSkinStyle(SkinStyle.Office2007Silver);
+            //m_trl32.LookAndFeel.SkinName = SkinStyle.Coffee;
+
+            //m_trl32.LookAndFeel.UseDefaultLookAndFeel = false;
+            //m_trl32.LookAndFeel.Style = LookAndFeelStyle.Office2003;
+            ////m_trl32.LookAndFeel.UseWindowsXPTheme = true;
+            ////m_trl32.OptionsSelection.EnableAppearanceHotTrackedRow = DevExpress.Utils.DefaultBoolean.False;
+            ////m_trl32.OptionsSelection.InvertSelection = false;
+            ////var tx = m_trl32.OptionsSelection.MultiSelect;
+
+
+            //m_trl32.Appearance.FocusedRow.GradientMode = LinearGradientMode.Vertical;
+            //m_trl32.Appearance.FocusedRow.Options.UseBackColor = true;
+            //m_trl32.Appearance.FocusedRow.BackColor = Color.Gainsboro;
+            //m_trl32.Appearance.FocusedRow.BackColor2 = Color.MintCream;
+            //m_trl32.Appearance.FocusedRow.ForeColor = Color.Navy;
+            //m_trl32.Appearance.FocusedRow.Options.UseBackColor = true;
+            //m_trl31.Appearance.FocusedRow.GradientMode = LinearGradientMode.BackwardDiagonal;
+            //m_trl32.Appearance.FocusedRow.BackColor = Color.Purple;
+            //m_trl32.Appearance.FocusedRow.BackColor2 = Color.Blue;            
+            //m_trl32.Appearance.SelectedRow.Options.UseBackColor = true;
+            //m_trl32.Appearance.SelectedRow.BackColor = System.Drawing.Color.Maroon;
+            //m_trl32.Appearance.SelectedRow.BackColor2 = System.Drawing.Color.YellowGreen; 
+            #endregion
+
+            m_trl32.LookAndFeel.UseDefaultLookAndFeel = false;
+            m_trl32.LookAndFeel.Style = LookAndFeelStyle.Office2003;
+
+            m_trl32.Appearance.FocusedRow.Options.UseBackColor = true;
+            m_trl32.Appearance.FocusedRow.GradientMode = LinearGradientMode.Vertical;            
+            m_trl32.Appearance.FocusedRow.BackColor = Color.Gainsboro;
+            m_trl32.Appearance.FocusedRow.BackColor2 = Color.MintCream;
+            m_trl32.Appearance.FocusedRow.ForeColor = Color.Navy;
         }
 
     }

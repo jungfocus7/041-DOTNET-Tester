@@ -1,31 +1,10 @@
 ﻿using DevExpress.XtraTreeList;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 
 
-namespace WFOX31.Models
+namespace TesterDXApplication71.Models
 {
-    public sealed class RecordInfo : INotifyPropertyChanged
-    {
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName] string pnm = null)
-        {
-            if (string.IsNullOrWhiteSpace(pnm)) return;
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(pnm));
-        }
-
-        public string Data1 { get; set; }
-        public string Data2 { get; set; }
-        public string Data3 { get; set; }
-    }
-
-    public sealed class RecordInfoList : BindingList<RecordInfo>
-    {
-    }
-
-
     public sealed class VirtualRecordInfo : TreeList.IVirtualTreeListData
     {
         private const int _len = 3;

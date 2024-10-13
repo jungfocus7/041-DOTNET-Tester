@@ -53,6 +53,10 @@
     <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPdfViewer.v20.1, Version=20.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 20.1\Components\Bin\Framework\DevExpress.XtraTreeList.v20.1.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.2792.45, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2792.45\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
     </Reference>
@@ -78,6 +82,15 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataProviders\DefaultProvider.cs" />
+    <Compile Include="ExtendedControls\__Ext51__\TreeListEx51.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedControls\__Ext51__\XtraTabControlEx51.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Models\RecordInfo.cs" />
+    <Compile Include="Models\VirtualRecordInfo.cs" />
     <Compile Include="Tools\TimerHelper.cs" />
     <Compile Include="TesterProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,6 +126,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Web.WebView2.1.0.2792.45\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.2792.45\build\Microsoft.Web.WebView2.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

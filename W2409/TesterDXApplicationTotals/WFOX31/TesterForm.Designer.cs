@@ -29,19 +29,19 @@ namespace WFOX31
         /// </summary>
         private void InitializeComponent()
         {
-            this.m_xtc30 = new ExtendedControls.XtraTabControlEx51();
-            this.m_xtp31 = new ExtendedControls.XtraTabPageEx51();
-            this.m_trl31 = new ExtendedControls.TreeListEx51();
-            this.m_xtp32 = new ExtendedControls.XtraTabPageEx51();
-            this.m_trl32 = new ExtendedControls.TreeListEx51();
+            this.m_xtc30 = new WFOX31.ExtendedControls.XtraTabControlEx51();
+            this.m_xtp32 = new WFOX31.ExtendedControls.XtraTabPageEx51();
+            this.m_trl32 = new WFOX31.ExtendedControls.TreeListEx51();
+            this.m_xtp31 = new WFOX31.ExtendedControls.XtraTabPageEx51();
+            this.m_trl31 = new WFOX31.ExtendedControls.TreeListEx51();
             this.m_sbt31 = new DevExpress.XtraEditors.SimpleButton();
             this.m_sbt32 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.m_xtc30)).BeginInit();
             this.m_xtc30.SuspendLayout();
-            this.m_xtp31.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_trl31)).BeginInit();
             this.m_xtp32.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_trl32)).BeginInit();
+            this.m_xtp31.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_trl31)).BeginInit();
             this.SuspendLayout();
             // 
             // m_xtc30
@@ -58,12 +58,28 @@ namespace WFOX31
             this.m_xtc30.Location = new System.Drawing.Point(9, 9);
             this.m_xtc30.Margin = new System.Windows.Forms.Padding(0);
             this.m_xtc30.Name = "m_xtc30";
-            this.m_xtc30.SelectedTabPage = this.m_xtp31;
+            this.m_xtc30.SelectedTabPage = this.m_xtp32;
             this.m_xtc30.Size = new System.Drawing.Size(782, 540);
             this.m_xtc30.TabIndex = 0;
             this.m_xtc30.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.m_xtp31,
             this.m_xtp32});
+            // 
+            // m_xtp32
+            // 
+            this.m_xtp32.Controls.Add(this.m_trl32);
+            this.m_xtp32.Name = "m_xtp32";
+            this.m_xtp32.Size = new System.Drawing.Size(780, 511);
+            this.m_xtp32.Text = "피고(24)";
+            // 
+            // m_trl32
+            // 
+            this.m_trl32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_trl32.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_trl32.Location = new System.Drawing.Point(0, 0);
+            this.m_trl32.Name = "m_trl32";
+            this.m_trl32.Size = new System.Drawing.Size(780, 511);
+            this.m_trl32.TabIndex = 1;
             // 
             // m_xtp31
             // 
@@ -85,22 +101,6 @@ namespace WFOX31
             this.m_trl31.EndUnboundLoad();
             this.m_trl31.Size = new System.Drawing.Size(780, 511);
             this.m_trl31.TabIndex = 0;
-            // 
-            // m_xtp32
-            // 
-            this.m_xtp32.Controls.Add(this.m_trl32);
-            this.m_xtp32.Name = "m_xtp32";
-            this.m_xtp32.Size = new System.Drawing.Size(780, 511);
-            this.m_xtp32.Text = "피고(24)";
-            // 
-            // m_trl32
-            // 
-            this.m_trl32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_trl32.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_trl32.Location = new System.Drawing.Point(0, 0);
-            this.m_trl32.Name = "m_trl32";
-            this.m_trl32.Size = new System.Drawing.Size(780, 511);
-            this.m_trl32.TabIndex = 1;
             // 
             // m_sbt31
             // 
@@ -142,10 +142,10 @@ namespace WFOX31
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.m_xtc30)).EndInit();
             this.m_xtc30.ResumeLayout(false);
-            this.m_xtp31.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_trl31)).EndInit();
             this.m_xtp32.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_trl32)).EndInit();
+            this.m_xtp31.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_trl31)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -57,10 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataProviders\DefaultProvider.cs" />
-    <Compile Include="ExtendedControls\__Ext51_\TreeListEx51.cs">
+    <Compile Include="ExtendedControls\__Ext51__\TreeListEx51.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ExtendedControls\__Ext51_\XtraTabControlEx51.cs">
+    <Compile Include="ExtendedControls\__Ext51__\XtraTabControlEx51.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Models\RecordInfo.cs" />

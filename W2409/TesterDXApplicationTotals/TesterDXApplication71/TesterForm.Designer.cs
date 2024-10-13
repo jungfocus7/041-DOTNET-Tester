@@ -29,11 +29,14 @@ namespace TesterDXApplication71
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.Skins.SkinPaddingEdges skinPaddingEdges1 = new DevExpress.Skins.SkinPaddingEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TesterForm));
             this.m_ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.m_skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.m_barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
+            this.skinPaletteDropDownButtonItem1 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
             this.m_ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.m_ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -41,8 +44,10 @@ namespace TesterDXApplication71
             this.m_layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.m_groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.m_groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.progressPanel1 = new DevExpress.XtraWaitForm.ProgressPanel();
             this.m_webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.m_groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.m_trl32 = new TesterDXApplication71.ExtendedControls.TreeListEx51();
             this.m_layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.m_splitterItem1 = new DevExpress.XtraLayout.SplitterItem();
             this.m_splitterItem2 = new DevExpress.XtraLayout.SplitterItem();
@@ -57,6 +62,8 @@ namespace TesterDXApplication71
             this.m_groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_webView21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_groupControl1)).BeginInit();
+            this.m_groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_trl32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_splitterItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_splitterItem2)).BeginInit();
@@ -72,12 +79,16 @@ namespace TesterDXApplication71
             this.m_ribbonControl1.ExpandCollapseItem,
             this.m_ribbonControl1.SearchEditItem,
             this.m_skinRibbonGalleryBarItem1,
-            this.m_barButtonItem1});
+            this.m_barButtonItem1,
+            this.skinDropDownButtonItem1,
+            this.skinPaletteDropDownButtonItem1});
             this.m_ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.m_ribbonControl1.MaxItemId = 68;
+            this.m_ribbonControl1.MaxItemId = 75;
             this.m_ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.m_ribbonControl1.Name = "m_ribbonControl1";
             this.m_ribbonControl1.OptionsMenuMinWidth = 385;
+            this.m_ribbonControl1.PageHeaderItemLinks.Add(this.skinDropDownButtonItem1);
+            this.m_ribbonControl1.PageHeaderItemLinks.Add(this.skinPaletteDropDownButtonItem1);
             this.m_ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.m_ribbonPage1,
             this.m_ribbonPage2});
@@ -85,7 +96,7 @@ namespace TesterDXApplication71
             this.m_ribbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.m_ribbonControl1.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.False;
             this.m_ribbonControl1.ShowToolbarCustomizeItem = false;
-            this.m_ribbonControl1.Size = new System.Drawing.Size(1200, 167);
+            this.m_ribbonControl1.Size = new System.Drawing.Size(1200, 160);
             this.m_ribbonControl1.StatusBar = this.m_ribbonStatusBar1;
             this.m_ribbonControl1.Toolbar.ShowCustomizeItem = false;
             // 
@@ -117,6 +128,17 @@ namespace TesterDXApplication71
             this.m_barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("m_barButtonItem1.ImageOptions.LargeImage")));
             this.m_barButtonItem1.Name = "m_barButtonItem1";
             this.m_barButtonItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            this.m_barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.prBarButtonItemAllItemClick);
+            // 
+            // skinDropDownButtonItem1
+            // 
+            this.skinDropDownButtonItem1.Id = 73;
+            this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
+            // 
+            // skinPaletteDropDownButtonItem1
+            // 
+            this.skinPaletteDropDownButtonItem1.Id = 74;
+            this.skinPaletteDropDownButtonItem1.Name = "skinPaletteDropDownButtonItem1";
             // 
             // m_ribbonPage1
             // 
@@ -138,10 +160,10 @@ namespace TesterDXApplication71
             // 
             // m_ribbonStatusBar1
             // 
-            this.m_ribbonStatusBar1.Location = new System.Drawing.Point(0, 778);
+            this.m_ribbonStatusBar1.Location = new System.Drawing.Point(0, 723);
             this.m_ribbonStatusBar1.Name = "m_ribbonStatusBar1";
             this.m_ribbonStatusBar1.Ribbon = this.m_ribbonControl1;
-            this.m_ribbonStatusBar1.Size = new System.Drawing.Size(1200, 22);
+            this.m_ribbonStatusBar1.Size = new System.Drawing.Size(1200, 24);
             // 
             // m_layoutControl1
             // 
@@ -150,30 +172,45 @@ namespace TesterDXApplication71
             this.m_layoutControl1.Controls.Add(this.m_groupControl2);
             this.m_layoutControl1.Controls.Add(this.m_groupControl1);
             this.m_layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_layoutControl1.Location = new System.Drawing.Point(0, 167);
+            this.m_layoutControl1.Location = new System.Drawing.Point(0, 160);
             this.m_layoutControl1.Name = "m_layoutControl1";
             this.m_layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(-1547, 156, 1266, 817);
             this.m_layoutControl1.Root = this.m_layoutControlGroup1;
-            this.m_layoutControl1.Size = new System.Drawing.Size(1200, 611);
+            this.m_layoutControl1.Size = new System.Drawing.Size(1200, 563);
             this.m_layoutControl1.TabIndex = 2;
             this.m_layoutControl1.Text = "layoutControl1";
             // 
             // m_groupControl3
             // 
+            this.m_groupControl3.Controls.Add(this.m_trl32);
             this.m_groupControl3.Location = new System.Drawing.Point(999, 1);
             this.m_groupControl3.Name = "m_groupControl3";
-            this.m_groupControl3.Size = new System.Drawing.Size(200, 609);
+            this.m_groupControl3.Size = new System.Drawing.Size(200, 561);
             this.m_groupControl3.TabIndex = 6;
             this.m_groupControl3.Text = "문서목록";
             // 
             // m_groupControl2
             // 
+            this.m_groupControl2.Controls.Add(this.progressPanel1);
             this.m_groupControl2.Controls.Add(this.m_webView21);
             this.m_groupControl2.Location = new System.Drawing.Point(211, 1);
             this.m_groupControl2.Name = "m_groupControl2";
-            this.m_groupControl2.Size = new System.Drawing.Size(778, 609);
+            this.m_groupControl2.Size = new System.Drawing.Size(778, 561);
             this.m_groupControl2.TabIndex = 5;
             this.m_groupControl2.Text = "문서뷰어";
+            // 
+            // progressPanel1
+            // 
+            this.progressPanel1.AnimationToTextDistance = 20;
+            this.progressPanel1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.progressPanel1.Appearance.Options.UseBackColor = true;
+            this.progressPanel1.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.progressPanel1.Location = new System.Drawing.Point(23, 47);
+            this.progressPanel1.Name = "progressPanel1";
+            this.progressPanel1.Size = new System.Drawing.Size(328, 186);
+            this.progressPanel1.TabIndex = 1;
+            this.progressPanel1.Text = "progressPanel1";
+            this.progressPanel1.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Ring;
             // 
             // m_webView21
             // 
@@ -183,8 +220,8 @@ namespace TesterDXApplication71
             this.m_webView21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_webView21.Location = new System.Drawing.Point(2, 23);
             this.m_webView21.Name = "m_webView21";
-            this.m_webView21.Size = new System.Drawing.Size(774, 584);
-            this.m_webView21.Source = new System.Uri("https://www.youtube.com/watch?v=oQSUZBcIBzs", System.UriKind.Absolute);
+            this.m_webView21.Size = new System.Drawing.Size(774, 536);
+            this.m_webView21.Source = new System.Uri("https://www.google.com/", System.UriKind.Absolute);
             this.m_webView21.TabIndex = 0;
             this.m_webView21.ZoomFactor = 1D;
             // 
@@ -192,9 +229,18 @@ namespace TesterDXApplication71
             // 
             this.m_groupControl1.Location = new System.Drawing.Point(1, 1);
             this.m_groupControl1.Name = "m_groupControl1";
-            this.m_groupControl1.Size = new System.Drawing.Size(200, 609);
+            this.m_groupControl1.Size = new System.Drawing.Size(200, 561);
             this.m_groupControl1.TabIndex = 4;
             this.m_groupControl1.Text = "기록목록";
+            // 
+            // m_trl32
+            // 
+            this.m_trl32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_trl32.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_trl32.Location = new System.Drawing.Point(2, 23);
+            this.m_trl32.Name = "m_trl32";
+            this.m_trl32.Size = new System.Drawing.Size(196, 536);
+            this.m_trl32.TabIndex = 1;
             // 
             // m_layoutControlGroup1
             // 
@@ -206,7 +252,7 @@ namespace TesterDXApplication71
             this.m_layoutControlItem3});
             this.m_layoutControlGroup1.Name = "Root";
             this.m_layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.m_layoutControlGroup1.Size = new System.Drawing.Size(1200, 611);
+            this.m_layoutControlGroup1.Size = new System.Drawing.Size(1200, 563);
             this.m_layoutControlGroup1.TextVisible = false;
             // 
             // m_splitterItem1
@@ -216,7 +262,7 @@ namespace TesterDXApplication71
             this.m_splitterItem1.IsCollapsible = DevExpress.Utils.DefaultBoolean.True;
             this.m_splitterItem1.Location = new System.Drawing.Point(200, 0);
             this.m_splitterItem1.Name = "splitterItem1";
-            this.m_splitterItem1.Size = new System.Drawing.Size(10, 609);
+            this.m_splitterItem1.Size = new System.Drawing.Size(10, 561);
             // 
             // m_splitterItem2
             // 
@@ -226,7 +272,7 @@ namespace TesterDXApplication71
             this.m_splitterItem2.IsCollapsible = DevExpress.Utils.DefaultBoolean.True;
             this.m_splitterItem2.Location = new System.Drawing.Point(988, 0);
             this.m_splitterItem2.Name = "splitterItem2";
-            this.m_splitterItem2.Size = new System.Drawing.Size(10, 609);
+            this.m_splitterItem2.Size = new System.Drawing.Size(10, 561);
             // 
             // m_layoutControlItem1
             // 
@@ -236,7 +282,7 @@ namespace TesterDXApplication71
             this.m_layoutControlItem1.MinSize = new System.Drawing.Size(200, 1);
             this.m_layoutControlItem1.Name = "layoutControlItem1";
             this.m_layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.m_layoutControlItem1.Size = new System.Drawing.Size(200, 609);
+            this.m_layoutControlItem1.Size = new System.Drawing.Size(200, 561);
             this.m_layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.m_layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.m_layoutControlItem1.TextVisible = false;
@@ -249,7 +295,7 @@ namespace TesterDXApplication71
             this.m_layoutControlItem2.MinSize = new System.Drawing.Size(1, 1);
             this.m_layoutControlItem2.Name = "layoutControlItem2";
             this.m_layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.m_layoutControlItem2.Size = new System.Drawing.Size(778, 609);
+            this.m_layoutControlItem2.Size = new System.Drawing.Size(778, 561);
             this.m_layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.m_layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.m_layoutControlItem2.TextVisible = false;
@@ -262,16 +308,16 @@ namespace TesterDXApplication71
             this.m_layoutControlItem3.MinSize = new System.Drawing.Size(200, 1);
             this.m_layoutControlItem3.Name = "layoutControlItem3";
             this.m_layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.m_layoutControlItem3.Size = new System.Drawing.Size(200, 609);
+            this.m_layoutControlItem3.Size = new System.Drawing.Size(200, 561);
             this.m_layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.m_layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.m_layoutControlItem3.TextVisible = false;
             // 
             // TesterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.ClientSize = new System.Drawing.Size(1200, 747);
             this.Controls.Add(this.m_layoutControl1);
             this.Controls.Add(this.m_ribbonStatusBar1);
             this.Controls.Add(this.m_ribbonControl1);
@@ -287,6 +333,8 @@ namespace TesterDXApplication71
             this.m_groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_webView21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_groupControl1)).EndInit();
+            this.m_groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_trl32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_splitterItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_splitterItem2)).EndInit();
@@ -317,5 +365,9 @@ namespace TesterDXApplication71
         private DevExpress.XtraLayout.SplitterItem m_splitterItem2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private Microsoft.Web.WebView2.WinForms.WebView2 m_webView21;
+        private ExtendedControls.TreeListEx51 m_trl32;
+        private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
+        private DevExpress.XtraBars.SkinPaletteDropDownButtonItem skinPaletteDropDownButtonItem1;
+        private DevExpress.XtraWaitForm.ProgressPanel progressPanel1;
     }
 }
