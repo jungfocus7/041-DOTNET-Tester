@@ -13,7 +13,7 @@ namespace ConsoleApp1
 {
     public static class TyxProgram
     {
-        public static void Main(string[] args)
+        private static void prTester31()
         {
             //UserInfo ui = new UserInfo()
             //{
@@ -73,17 +73,54 @@ namespace ConsoleApp1
 
             //string cpnm = "UserInfo.Num";
             //string cpnm = "UserInfo.Name";
-            string cpnm = "UserInfo.Age";
-            UserInfo ui = new UserInfo()
-            {
-                Num = 99,
-                Name = "박종명",
-                Age = "37",
-                Job = "유통업",
-            };
-            object[] vgoa = { ui };
-            string muv = ModelHelper.GetMatchUpValue(cpnm, vgoa);
+            //string cpnm = "UserInfo.Age";
+            //UserInfo ui = new UserInfo()
+            //{
+            //    Num = 99,
+            //    Name = "박종명",
+            //    Age = "37",
+            //    Job = "유통업",
+            //};
+            //object[] vgoa = { ui };
+            //string muv = ModelHelper.GetMatchUpValue(cpnm, vgoa);
         }
+
+
+
+        /// <summary>
+        /// NormalTech4
+        /// </summary>
+        /// <param name="val"></param>
+        /// <returns></returns>
+        private static string[] prGetCoreVals(string val)
+        {
+            if (string.IsNullOrWhiteSpace(val)) return null;
+
+            int l = val.Length - 3;
+            string txt = val.Substring(2, l);
+
+            string[] txa = txt.Split('.');
+            if ((txa != null) && (txa.Length == 2))
+                return txa;
+            else
+                return null;
+        }
+        private static void prTester41()
+        {
+            string val = "{#UserInfo.Name}";
+            string[] txa = prGetCoreVals(val);
+        }
+
+
+        public static void Main(string[] args)
+        {
+            prTester41();
+        }
+
+
+
+
+
 
 
         //private static void prXXOP(string cpnm, object[] vgoa)
